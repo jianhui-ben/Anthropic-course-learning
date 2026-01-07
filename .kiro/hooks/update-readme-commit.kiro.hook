@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Update README After Commit",
+  "description": "Automatically updates the README.md file with the latest code examples and tutorial content whenever a commit is made to the repository",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "I just made a commit to my Claude API learning repository. Please review the current state of my code, notebooks, and examples, then update the README.md file to reflect:\n\n1. Any new code examples or utilities I've added\n2. Updated tutorial content or learning materials\n3. New notebooks or experiments\n4. Any changes to setup instructions or requirements\n5. Progress on learning goals or new capabilities demonstrated\n\nMake sure the README stays current with my latest work and provides clear guidance for anyone wanting to understand or use this learning repository. Focus on practical examples and clear explanations of what each component does."
+  }
+}
