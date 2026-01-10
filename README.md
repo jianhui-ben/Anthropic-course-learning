@@ -6,8 +6,10 @@ A hands-on learning workspace for mastering Anthropic's Claude API through pract
 
 This repository demonstrates key Claude API concepts through working code:
 
-- **Interactive Chatbots** - Multi-turn conversations with memory and commands
-- **Helper Utilities** - Reusable functions for common Claude API patterns
+- **Interactive Chatbots** - Multi-turn conversations with memory, commands, and specialized agents
+- **Streaming Responses** - Real-time response generation for dynamic user experiences
+- **System Prompts** - Role-based AI agents (math tutor, storyteller, etc.)
+- **Helper Utilities** - Comprehensive functions for common Claude API patterns
 - **Progressive Learning** - From basic API calls to advanced conversation management
 - **Practical Examples** - Ready-to-run scripts and notebook demonstrations
 
@@ -49,15 +51,25 @@ jupyter lab
 
 ### 📚 Notebooks (Interactive Learning)
 - **`01_getting_started.ipynb`** - Basic API connection and simple chat
-- **`02_interactive_chatbot.ipynb`** - Multi-turn conversations with commands and history
+- **`02_interactive_chatbot.ipynb`** - Multi-turn conversations with commands, history, and specialized agents
+  - Simple and advanced chatbot implementations
+  - Math tutor agent with system prompts
+  - Command system (`history`, `clear`, `quit`, `help`)
+  - Conversation memory and context management
+- **`03_streaming_responses.ipynb`** - Real-time response streaming for dynamic interactions
+  - Streaming vs regular response comparison
+  - Interactive streaming storyteller
+  - Performance and user experience benefits
 
 ### 🛠️ Utilities (`utils/`)
-- **`claude_helpers.py`** - Core helper functions for Claude API interactions
+- **`claude_helpers.py`** - Comprehensive helper functions for Claude API interactions
   - `get_claude_client()` - Initialize API client with error handling
   - `simple_chat()` - Quick single-message conversations
-  - `chat()` - Multi-turn conversation management
+  - `chat()` - Multi-turn conversation management with system prompt support
   - `add_user_message()` / `add_assistant_message()` - Message history helpers
   - `print_response()` - Formatted response display
+  - **New**: Streaming support functions for real-time responses
+  - **New**: Enhanced error handling and connection management
 
 ### 🎯 Examples (Ready-to-Run)
 - **`example_interactive_chatbot.py`** - Full-featured command-line chatbot with:
@@ -76,12 +88,26 @@ jupyter lab
 - **Command System** - Built-in commands for history, clearing, and navigation
 - **Error Handling** - Graceful handling of API errors and user interruptions
 - **Flexible Input** - Support for both interactive and demo modes
+- **Specialized Agents** - System prompt-driven role-based AI (math tutor, storyteller)
+
+### 🌊 Streaming Response Features
+- **Real-time Output** - See responses generate word-by-word
+- **Improved User Experience** - Immediate feedback and perceived faster responses
+- **Interactive Applications** - Perfect for chat interfaces and creative tools
+- **Performance Comparison** - Side-by-side demos of streaming vs regular responses
+
+### 🎭 System Prompt Mastery
+- **Role Definition** - Transform Claude into specialized agents
+- **Behavioral Control** - Guide response style, tone, and approach
+- **Educational Applications** - Math tutor that guides rather than gives answers
+- **Creative Applications** - Storyteller with vivid, engaging narratives
 
 ### 💡 API Best Practices
 - **Environment Management** - Secure API key handling with `.env` files
 - **Cost Optimization** - Smart model selection (Haiku for learning, Sonnet/Opus when needed)
 - **Message Management** - Efficient conversation history tracking
 - **Connection Testing** - Robust client initialization with error feedback
+- **Temperature Control** - Fine-tuned response creativity and consistency
 
 ### 🔧 Development Patterns
 - **Modular Design** - Reusable helper functions in `utils/`
@@ -155,15 +181,19 @@ After running the setup script, you'll have a "Claude API Learning" kernel avail
 - [x] Conversation history and memory
 - [x] Error handling and graceful exits
 - [x] Modular helper function library
+- [x] **System prompts and role definitions** - Math tutor and storyteller agents
+- [x] **Streaming responses** - Real-time response generation
+- [x] **Advanced prompt engineering** - Specialized agent behaviors
+- [x] **Performance optimization** - Response timing and user experience
 
 ### 🎯 Next Steps
 - [ ] Function calling capabilities
-- [ ] System prompts and role definitions
-- [ ] Advanced prompt engineering techniques
-- [ ] Rate limiting and cost optimization
+- [ ] Advanced conversation flows and branching
+- [ ] Rate limiting and cost optimization strategies
 - [ ] Integration with external APIs
-- [ ] Streaming responses
-- [ ] Custom conversation flows
+- [ ] Custom conversation templates
+- [ ] Multi-modal interactions (when available)
+- [ ] Production deployment patterns
 
 ## Tips for Learning
 
