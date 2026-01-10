@@ -32,7 +32,7 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000):
+def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000, system=None, temperature = 0.2):
     """
     Send messages to Claude and return response text
     
@@ -40,21 +40,30 @@ def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000):
         messages (list): List of message dictionaries
         model (str): Model to use
         max_tokens (int): Maximum tokens in response
+        system (str): System prompt to set Claude's behavior
     
     Returns:
         str: Claude's response text
     """
     client = get_claude_client()
     
-    message = client.messages.create(
-        model=model,
-        max_tokens=max_tokens,
-        messages=messages,
-    )
+    # Prepare the request parameters
+    request_params = {
+        "model": model,
+        "max_tokens": max_tokens,
+        "messages": messages,
+        "temperature": temperature
+    }
+    
+    # Add system prompt if provided
+    if system:
+        request_params["system"] = system
+    
+    message = client.messages.create(**request_params)
     
     return message.content[0].text
 
-def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000):
+def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000, system=None):
     """
     Simple chat function for quick experiments
     
@@ -62,13 +71,14 @@ def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000):
         message (str): The message to send to Claude
         model (str): Model to use
         max_tokens (int): Maximum tokens in response
+        system (str): System prompt to set Claude's behavior
     
     Returns:
         str: Claude's response
     """
     messages = []
     add_user_message(messages, message)
-    return chat(messages, model, max_tokens)
+    return chat(messages, model, max_tokens, system)
 
 def print_response(response):
     """Pretty print Claude's response"""
