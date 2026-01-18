@@ -60,6 +60,18 @@ jupyter lab
   - Streaming vs regular response comparison
   - Interactive streaming storyteller
   - Performance and user experience benefits
+- **`04_structural_output.ipynb`** - Controlling Claude's output format and structure
+  - Stop sequences for precise output control
+  - Structured response generation (JSON, code blocks, lists)
+  - Prefilling assistant responses for format guidance
+  - System prompts for output constraints
+- **`05_prompt_eval.ipynb`** - **NEW!** Comprehensive prompt evaluation and testing framework
+  - Automated dataset generation for testing prompts
+  - LLM-as-a-judge evaluation methodology
+  - Syntax validation for structured outputs (JSON, Python, regex)
+  - Combined scoring systems (semantic + syntactic evaluation)
+  - Movie recommendation prompt testing with real IMDB data
+  - Evaluation metrics and performance analysis
 
 ### 🛠️ Utilities (`utils/`)
 - **`claude_helpers.py`** - Comprehensive helper functions for Claude API interactions
@@ -68,8 +80,9 @@ jupyter lab
   - `chat()` - Multi-turn conversation management with system prompt support
   - `add_user_message()` / `add_assistant_message()` - Message history helpers
   - `print_response()` - Formatted response display
-  - **New**: Streaming support functions for real-time responses
-  - **New**: Enhanced error handling and connection management
+  - **Enhanced**: Streaming support functions for real-time responses
+  - **Enhanced**: Advanced error handling and connection management
+  - **Enhanced**: Support for stop sequences and output control
 
 ### 🎯 Examples (Ready-to-Run)
 - **`example_interactive_chatbot.py`** - Full-featured command-line chatbot with:
@@ -77,6 +90,12 @@ jupyter lab
   - Special commands (`history`, `clear`, `quit`)
   - Error handling and graceful exits
   - Demo mode with pre-scripted conversations
+
+### 📊 Datasets
+- **`dataset/dataset.json`** - Curated movie dataset for prompt evaluation
+  - 10 popular movies with IMDB IDs
+  - Generated using Claude for testing recommendation prompts
+  - Used in evaluation frameworks and testing scenarios
 
 ### 🧪 Experiments
 - Space for quick prototypes and testing new ideas

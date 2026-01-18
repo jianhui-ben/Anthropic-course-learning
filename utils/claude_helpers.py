@@ -32,7 +32,7 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000, system=None, temperature = 0.2):
+def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000, system=None, temperature=0.2, stop_sequences=None):
     """
     Send messages to Claude and return response text
     
@@ -41,6 +41,8 @@ def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000, system=None
         model (str): Model to use
         max_tokens (int): Maximum tokens in response
         system (str): System prompt to set Claude's behavior
+        temperature (float): Response creativity (0.0-1.0)
+        stop_sequences (list): Sequences where Claude should stop generating
     
     Returns:
         str: Claude's response text
@@ -55,15 +57,17 @@ def chat(messages, model="claude-3-haiku-20240307", max_tokens=1000, system=None
         "temperature": temperature
     }
     
-    # Add system prompt if provided
+    # Add optional parameters only if provided
     if system:
         request_params["system"] = system
+    if stop_sequences:
+        request_params["stop_sequences"] = stop_sequences
     
     message = client.messages.create(**request_params)
     
     return message.content[0].text
 
-def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000, system=None):
+def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000, system=None, temperature=0.2):
     """
     Simple chat function for quick experiments
     
@@ -78,7 +82,7 @@ def simple_chat(message, model="claude-3-haiku-20240307", max_tokens=1000, syste
     """
     messages = []
     add_user_message(messages, message)
-    return chat(messages, model, max_tokens, system)
+    return chat(messages, model, max_tokens, system, temperature)
 
 def print_response(response):
     """Pretty print Claude's response"""
