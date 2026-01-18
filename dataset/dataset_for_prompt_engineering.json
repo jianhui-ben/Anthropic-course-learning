@@ -1,0 +1,44 @@
+[
+  {
+    "prompt_inputs": {
+      "title": "Moonlight",
+      "imdb_id": "tt4975722"
+    },
+    "solution_criteria": [
+      "Returns exactly 5 comma-separated movie or TV show titles in JSON format",
+      "All suggested titles share thematic, stylistic, or narrative similarities with Moonlight (intimate character studies, coming-of-age narratives, or exploration of identity)",
+      "Includes primarily independent, art-house, or festival-acclaimed films rather than only mainstream blockbusters",
+      "Titles are formatted as a comma-separated list within the 'out' JSON field"
+    ],
+    "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+    "scenario": "Testing with a niche indie film to verify the system can identify similar lesser-known titles across independent cinema, art-house productions, and festival favorites rather than only mainstream blockbusters"
+  },
+  {
+    "prompt_inputs": {
+      "title": "Parasite",
+      "imdb_id": "tt6751668"
+    },
+    "solution_criteria": [
+      "Returns exactly 5 comma-separated titles in JSON format",
+      "Includes at least 2 non-English language titles that share thematic or stylistic similarities (e.g., class commentary, social tension, thriller elements)",
+      "Titles demonstrate understanding of cross-cultural similarities beyond language (theme, tone, narrative structure)",
+      "All recommended titles are legitimate movies or TV shows"
+    ],
+    "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+    "scenario": "Testing with a title from a specific cultural or international context (e.g., a Korean thriller or Japanese anime) to evaluate whether the system can identify cross-cultural similarities in themes and style rather than defaulting to English-language titles only"
+  },
+  {
+    "prompt_inputs": {
+      "title": "Law & Order: Special Victims Unit",
+      "imdb_id": "tt0203259"
+    },
+    "solution_criteria": [
+      "Returns exactly 5 titles in comma-separated format",
+      "All returned titles are TV series with procedural drama format and episodic storytelling",
+      "Titles share similar genre (crime/legal drama) or thematic elements with the input series",
+      "Response is valid JSON with 'out' key containing the comma-separated list"
+    ],
+    "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+    "scenario": "Testing with a long-running TV series (e.g., a procedural drama) to ensure the system returns appropriate similar series that share format, genre conventions, and episodic storytelling rather than one-off movies"
+  }
+]

@@ -72,6 +72,13 @@ jupyter lab
   - Combined scoring systems (semantic + syntactic evaluation)
   - Movie recommendation prompt testing with real IMDB data
   - Evaluation metrics and performance analysis
+- **`06_prompt_engineering.ipynb`** - **NEW!** Advanced prompt engineering with automated evaluation
+  - Complete `PromptEvaluator` class for systematic prompt testing
+  - Automated test case generation from task descriptions
+  - Concurrent evaluation processing for efficiency
+  - HTML report generation with detailed scoring breakdowns
+  - Template rendering system for dynamic prompt construction
+  - Real-world example: Movie recommendation system evaluation
 
 ### 🛠️ Utilities (`utils/`)
 - **`claude_helpers.py`** - Comprehensive helper functions for Claude API interactions
@@ -96,6 +103,11 @@ jupyter lab
   - 10 popular movies with IMDB IDs
   - Generated using Claude for testing recommendation prompts
   - Used in evaluation frameworks and testing scenarios
+- **`dataset/dataset_for_prompt_engineering.json`** - **NEW!** Advanced evaluation dataset
+  - 3 diverse test cases for movie recommendation prompts
+  - Includes indie films, international cinema, and TV series
+  - Comprehensive solution criteria for rigorous evaluation
+  - Generated using the PromptEvaluator class
 
 ### 🧪 Experiments
 - Space for quick prototypes and testing new ideas
@@ -120,6 +132,15 @@ jupyter lab
 - **Behavioral Control** - Guide response style, tone, and approach
 - **Educational Applications** - Math tutor that guides rather than gives answers
 - **Creative Applications** - Storyteller with vivid, engaging narratives
+
+### 🔬 Prompt Evaluation & Engineering
+- **Automated Testing Framework** - Systematic evaluation of prompt performance
+- **LLM-as-a-Judge** - Use Claude to evaluate Claude's own outputs
+- **Multi-Criteria Scoring** - Combine semantic relevance with syntax validation
+- **Concurrent Processing** - Efficient batch evaluation with threading
+- **HTML Report Generation** - Professional evaluation reports with scoring breakdowns
+- **Template System** - Dynamic prompt construction with variable substitution
+- **Dataset Generation** - Automated creation of diverse test cases from task descriptions
 
 ### 💡 API Best Practices
 - **Environment Management** - Secure API key handling with `.env` files
@@ -147,6 +168,19 @@ Features:
 - Use `history` to see conversation log
 - Use `clear` to start fresh
 - Use `quit` to exit gracefully
+
+### Prompt Evaluation Framework
+```bash
+source claude-api-env/bin/activate
+jupyter lab
+# Open notebooks/06_prompt_engineering.ipynb
+```
+
+Features:
+- Generate test datasets automatically from task descriptions
+- Run systematic evaluations with concurrent processing
+- Generate professional HTML reports with scoring breakdowns
+- Compare different prompt variations and approaches
 
 ### Jupyter Notebooks
 ```bash
@@ -204,6 +238,10 @@ After running the setup script, you'll have a "Claude API Learning" kernel avail
 - [x] **Streaming responses** - Real-time response generation
 - [x] **Advanced prompt engineering** - Specialized agent behaviors
 - [x] **Performance optimization** - Response timing and user experience
+- [x] **Prompt evaluation framework** - Automated testing and scoring systems
+- [x] **LLM-as-a-judge methodology** - Using Claude to evaluate prompt outputs
+- [x] **Concurrent evaluation processing** - Efficient batch testing with threading
+- [x] **HTML report generation** - Professional evaluation dashboards
 
 ### 🎯 Next Steps
 - [ ] Function calling capabilities
@@ -213,6 +251,9 @@ After running the setup script, you'll have a "Claude API Learning" kernel avail
 - [ ] Custom conversation templates
 - [ ] Multi-modal interactions (when available)
 - [ ] Production deployment patterns
+- [ ] A/B testing frameworks for prompt optimization
+- [ ] Custom evaluation metrics and scoring systems
+- [ ] Integration with prompt management platforms
 
 ## Tips for Learning
 

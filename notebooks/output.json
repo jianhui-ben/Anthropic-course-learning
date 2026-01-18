@@ -1,0 +1,59 @@
+[
+  {
+    "output": "```json\n{\n  \"out\": \"Criminal Intent, SVU: Organized Crime, The Wire, Mindhunter, Homicide: Life on the Street\"\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "title": "Law & Order: Special Victims Unit",
+        "imdb_id": "tt0203259"
+      },
+      "solution_criteria": [
+        "Returns exactly 5 titles in comma-separated format",
+        "All returned titles are TV series with procedural drama format and episodic storytelling",
+        "Titles share similar genre (crime/legal drama) or thematic elements with the input series",
+        "Response is valid JSON with 'out' key containing the comma-separated list"
+      ],
+      "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+      "scenario": "Testing with a long-running TV series (e.g., a procedural drama) to ensure the system returns appropriate similar series that share format, genre conventions, and episodic storytelling rather than one-off movies"
+    },
+    "score": 7,
+    "reasoning": "The solution meets all mandatory criteria: it provides exactly 5 titles in comma-separated JSON format with the 'out' key. All titles are legitimate TV series with procedural drama formats. The thematic alignment is excellent - Criminal Intent, Organized Crime, The Wire, Mindhunter, and Homicide are all crime/legal dramas with investigative elements similar to SVU. However, there is a factual error with 'SVU: Organized Crime' which should be 'Law & Order: Organized Crime' - this is a material mistake that affects accuracy despite meeting the structural requirements. The other titles are correctly named and highly relevant."
+  },
+  {
+    "output": "```json\n{\n  \"out\": \"Boyhood, Manchester by the Sea, Moonrise Kingdom, The Florida Project, Waves\"\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "title": "Moonlight",
+        "imdb_id": "tt4975722"
+      },
+      "solution_criteria": [
+        "Returns exactly 5 comma-separated movie or TV show titles in JSON format",
+        "All suggested titles share thematic, stylistic, or narrative similarities with Moonlight (intimate character studies, coming-of-age narratives, or exploration of identity)",
+        "Includes primarily independent, art-house, or festival-acclaimed films rather than only mainstream blockbusters",
+        "Titles are formatted as a comma-separated list within the 'out' JSON field"
+      ],
+      "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+      "scenario": "Testing with a niche indie film to verify the system can identify similar lesser-known titles across independent cinema, art-house productions, and festival favorites rather than only mainstream blockbusters"
+    },
+    "score": 9,
+    "reasoning": "The solution correctly identifies 5 high-quality independent films that thematically align with Moonlight's exploration of identity, intimate character development, and coming-of-age narratives. Boyhood, Manchester by the Sea, Moonrise Kingdom, The Florida Project, and Waves are all festival-acclaimed, art-house films rather than mainstream blockbusters. The JSON structure includes the required 'out' field with all 5 titles. However, there is a minor formatting inconsistency: the task example shows titles as separate quoted strings (\"Top Gun\", \"The Dark Knight\", \"The Godfather\"), while this solution presents them as a single comma-separated string. This is a secondary formatting issue that doesn't affect the core content quality or JSON validity, but represents a deviation from the stated format specification."
+  },
+  {
+    "output": "```json\n{\n  \"out\": \"Squid Game, Memories of Murder, The Handmaiden, Mother, Burning\"\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "title": "Parasite",
+        "imdb_id": "tt6751668"
+      },
+      "solution_criteria": [
+        "Returns exactly 5 comma-separated titles in JSON format",
+        "Includes at least 2 non-English language titles that share thematic or stylistic similarities (e.g., class commentary, social tension, thriller elements)",
+        "Titles demonstrate understanding of cross-cultural similarities beyond language (theme, tone, narrative structure)",
+        "All recommended titles are legitimate movies or TV shows"
+      ],
+      "task_description": "Your task is evaluate the following task's relevancy: generate 5 movie or tv shows titles similar to the given title.\nThe titles should be just like a list of titles with comma separated only.\n\nThe titles should be similar to the given title for the similar theme, setting, actor or other common categories.\n\nRespond with JSON. Keep your response concise and direct.\n\nfor example \n```json\n{\"out\" : \"Top Gun\", \"The Dark Knight\", \"The Godfather\"}",
+      "scenario": "Testing with a title from a specific cultural or international context (e.g., a Korean thriller or Japanese anime) to evaluate whether the system can identify cross-cultural similarities in themes and style rather than defaulting to English-language titles only"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it provides exactly 5 comma-separated titles in JSON format, includes well over 2 non-English language titles (4 Korean films), all titles are legitimate and demonstrate sophisticated understanding of Parasite's themes of class struggle, social tension, and psychological thriller elements. The recommendations show strong thematic coherence\u2014Squid Game (class hierarchy), Memories of Murder (social commentary), The Handmaiden (class deception), Mother (family/class dynamics), and Burning (class tension and psychological depth). While the solution could have diversified non-English selections beyond Korean cinema, this is a minor consideration as the criterion only requires 'non-English language titles' without specifying diversity of origin. The solution demonstrates excellent understanding of cross-cultural narrative similarities and tone."
+  }
+]
